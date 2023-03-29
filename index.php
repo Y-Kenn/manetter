@@ -28,6 +28,10 @@ if(1){
         $tweets_sorted_like = $Manetter->sortTweetsByMetrics($tweets_30days, 'like_count');
         $tweets_sorted_retweet = $Manetter->sortTweetsByMetrics($tweets_30days, 'retweet_count');
         $tweets_sorted_reply = $Manetter->sortTweetsByMetrics($tweets_30days, 'reply_count');
+    }else{
+        debug('Could not get Tweets data');
+        debug('Twitter ID : ' .print_r($tweet_id, true));
+        debug('Token : ' .print_r($token, true));
     }
     
     
@@ -53,15 +57,17 @@ if(1){
     }
     
     //いいね・リツイート数処理
-    $reactions = $Manetter->getNewReactionNum($tweets, $twitter_id);
-    $new_get_like_num = $reactions['like_count'];
-    if($new_get_like_num < 0) $new_get_like_num = 0;
-    $new_get_retweet_num = $reactions['retweet_count'];
-    if($new_get_retweet_num < 0) $new_get_retweet_num = 0;
-    $liking = $Manetter->getLikingTweet($twitter_id);
-    if(isset($liking['data'])){
-        $new_liking_num = $Manetter->getNewLikingNum($liking, $twitter_id);
-        if($new_liking_num < 0) $new_liking_num = 0;
+    if(isset($tweets['data'])){
+        $reactions = $Manetter->getNewReactionNum($tweets, $twitter_id);
+        $new_get_like_num = $reactions['like_count'];
+        if($new_get_like_num < 0) $new_get_like_num = 0;
+        $new_get_retweet_num = $reactions['retweet_count'];
+        if($new_get_retweet_num < 0) $new_get_retweet_num = 0;
+        $liking = $Manetter->getLikingTweet($twitter_id);
+        if(isset($liking['data'])){
+            $new_liking_num = $Manetter->getNewLikingNum($liking, $twitter_id);
+            if($new_liking_num < 0) $new_liking_num = 0;
+        }
     }
 }
 

@@ -216,7 +216,10 @@ class TwitterApi extends UseApi{
         
 
         //取得に失敗した場合
-        if(!isset($result['data'])) return false;
+        if(!isset($result['data'])){
+            debug('ERROR -getTweet- : ' .print_r($result, true));
+            return false;
+        } 
 
         if(isset($result['meta']['next_token'])) $next_token = $result['meta']['next_token'];
 
@@ -656,7 +659,14 @@ class TwitterApi extends UseApi{
             'user.fields' => 'profile_image_url,public_metrics',
         ];
         $url = $this->makeUrl($base_url, $query);
-        return $this->request($url, 'GET');
+
+        $result = $this->request($url, 'GET');
+
+        if(!isset($result['data'])){
+            debug('ERROR -getMyInfo- : ' .print_r($result, true));
+            return false;
+        }
+        return $result;
 
     }
 
