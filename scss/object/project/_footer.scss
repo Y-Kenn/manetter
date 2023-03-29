@@ -1,0 +1,15 @@
+.p-footer{
+    width: 100%;
+    height: 50px;
+    background-color: #656565;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__text{
+        color: #fff;
+        font-size: $font-size_s;
+        @include mq(){
+            font-size: $font-size_ss;
+        }
+    }
+}

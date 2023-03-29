@@ -1,0 +1,23 @@
+.u-font_size{
+    &--ss{
+        font-size: $font-size_ss !important;
+    }
+    &--s{
+        font-size: $font-size_s !important;
+    }
+    &--m{
+        font-size: $font-size_m !important;
+    }
+    &--l{
+        font-size: $font-size_l !important;
+    }
+    &--xl{
+        font-size: $font-size_xl !important;
+    }
+    &--xxl{
+        font-size: $font-size_xxl !important;
+    }
+    &--3l{
+        font-size: $font-size_3l !important;
+    }
+}

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale-1">
+        <title><?php echo $site_title; ?></title>
+        <link rel="icon" href="./img/favicon.png">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <script src="https://kit.fontawesome.com/1329293142.js" crossorigin="anonymous"></script>
+        <script src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>

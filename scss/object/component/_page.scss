@@ -1,0 +1,44 @@
+.c-page{
+    padding: 2rem 7rem;
+    color: $font-color_dark;
+    @include mq(){
+        margin-top: 60px;
+        padding: 2rem;
+    }
+    &__title{
+        font-size: $font-size_xl;
+        margin-bottom: 0.5rem;
+    }
+    &__sub_title{
+        font-size: $font-size_l;
+        margin-bottom: 0.5rem;
+    }
+    &__row_parts{
+        padding: 2rem;
+        font-size: $font-size_l;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__fluid_parts{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    &__box{
+        line-height: 3rem;
+        min-width: 7em;
+        margin: 0 2rem;
+        text-align: center;
+        color: #fff;
+        border-radius: 10px;
+        border: 2px solid $border-color_default;
+    }
+    &__description{
+        font-size: $font-size_s;
+        margin-bottom: 1.5rem;
+        @include mq(){
+            display: none;
+        }
+    }
+
+}

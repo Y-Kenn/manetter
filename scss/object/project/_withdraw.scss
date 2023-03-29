@@ -1,0 +1,75 @@
+.p-withdraw{
+    width: 700px;
+    margin: auto;
+    text-align: center;
+    @include mq(){
+        width: 100%;
+    }
+    &__title{
+        margin-top: 50px;
+        font-size: $font-size_3l;
+        @include mq(){
+            margin-top: 40px;
+            font-size: $font-size_xxl;
+        }
+    }
+    &__form{
+        width: 470px;
+        //height: 700px;
+        margin: auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+        border: 2px solid $border-color_default;
+        border-radius: 10px;
+        @include mq('sm'){
+            width: 90%;
+            margin-top: 40px;
+            border-radius: 0;
+            border-left: none;
+            border-right: none;
+        }
+        &__textbox{
+            width: 340px;
+            margin: auto;
+            text-align: start;
+            @include mq('sm'){
+                width: 100%;
+            }
+        }
+        &__text{
+            color: $font-color_dark;
+            font-size: $font-size_m;
+        }
+    }
+    &__button{
+        border-radius: 10px;
+        text-align: center;
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+            cursor: pointer;
+        }
+        &__cancel{
+            font-size: $font-size_l;
+            background-color: #fff;
+            color: $mainBlue;
+            border: 2px solid $mainBlue;
+            width: 150px;
+            height: 50px;
+        }
+        &__withdraw{
+            font-size: $font-size_m;
+            border: 2px solid $border-color_default;
+            width: 120px;
+            height: 40px;
+            color: $font-color_soft;
+            background-color: #fff;
+        }
+    }
+    
+}

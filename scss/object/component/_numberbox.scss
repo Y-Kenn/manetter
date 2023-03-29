@@ -1,0 +1,23 @@
+.c-numberbox{
+    display: inline-flex;
+    width: 22rem;
+    height: 4rem;
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    box-sizing: border-box;
+    border: 1px solid #d0d0d0;
+    border-radius: 4rem;
+    background-color: #fff;
+    color: #555;
+    cursor: pointer;
+    font-size: $font-size_s;
+    -moz-appearance: textfield;
+    &::-webkit-inner-spin-button{
+        -webkit-appearance: none;
+    }
+    &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+    }
+    &::placeholder{
+        color: $font-color_soft;
+    }
+}

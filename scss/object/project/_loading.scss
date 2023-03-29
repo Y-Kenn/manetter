@@ -1,0 +1,18 @@
+.p-loading{
+    width: 700px;
+    margin: auto;
+    @include mq(){
+        width: 100%;
+    }
+    &__inner{
+        margin-top: 200px;
+        text-align: center;
+    }
+    &__icon{
+        font-size: $font-size_3l;
+        margin-bottom: 50px;
+    }
+    &__text{
+        font-size: $font-size_l;
+    }
+}

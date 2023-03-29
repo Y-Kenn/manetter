@@ -1,0 +1,72 @@
+.c-tweet_card{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    @include mq('sm'){
+        margin: 0;
+        border-radius: 0;
+        background-color: #fff;
+    }
+    &__header{
+        font-size: $font-size_l;
+        color: $font-color_dark;
+        margin-bottom: 0.5rem;
+    }
+    &__inner{
+        display: flex;
+        flex-direction: row;
+        //justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__item{
+        width: calc(100% / 3 - 1rem);
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-sizing: border-box;
+        //margin-right: 10px;
+        margin-bottom: 20px;
+        margin-right: 10px;
+        background-color: #fff;
+        @include mq(){
+            width: calc(100% / 2 - 1rem);
+        }
+        @include mq('sm'){
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 0;
+            border-radius: 0;
+            border-bottom: none;
+            border-left: none;
+            border-right: none;
+        }
+        &:last-child{
+            margin-right: 0;
+            @include mq('sm'){
+                border-bottom: 1px solid #ddd;
+                margin-bottom: 20px;
+            }
+        }
+        &:hover{
+            background-color: $background-color_hover;
+            transition: 0.3s;
+        }
+        & > a{
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+    }
+    &__button{
+        margin-top: 0.5rem;
+        text-align: center;
+    }
+}

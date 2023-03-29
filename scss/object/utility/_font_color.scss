@@ -1,0 +1,11 @@
+.u-font_color{
+    &--mainPink{
+        color: #ec67f8;
+    }
+    &--mainBlue{
+        color: $mainBlue;//#72c1f4
+    }
+    &--mainGreen{
+        color: #86fc72;
+    }
+}

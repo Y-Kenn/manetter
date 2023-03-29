@@ -1,0 +1,70 @@
+
+.c-tweet{
+    display: block; //aタグ用
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    &__header{
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+    &__profile_img{
+        height: 48px;
+        width: 48px;
+        float: left;
+        margin-right: 10px;
+        border-radius: 48px;
+        border: 1px solid#ddd;
+    }
+    &__name{
+        font-size: $font-size_m;
+        color: $font-color_dark;
+        //float: left;
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+    }
+    &__screen_name{
+        font-size: $font-size_s;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        //float: left;
+    }
+    &__body{
+        font-size: $font-size_s;
+    }
+    &__text{
+        font-size: $font-size_s;
+    }
+    &__footer{
+        margin-top: auto;
+        width: 100%;
+        font-size: $font-size_s;
+        overflow: hidden;
+    }
+    &__reaction{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: $font-size_ss;
+        & > i{
+            margin-left: 0.5em;
+        }
+        & > span{
+            margin-left: 0.2em;
+        }
+        
+    }
+    &__date{
+        float: right;
+        font-size: $font-size_ss;
+        margin-top: 5px;
+    }
+    &:hover{
+        background-color: $background-color_hover;
+        transition: 0.3s;
+    }
+}

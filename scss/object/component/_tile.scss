@@ -1,0 +1,88 @@
+
+.c-tile{
+    &__header{
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        font-size: $font-size_l;
+        font-weight: bold;
+        margin-left: 1.2rem;
+    }
+    &__inner{
+        width: 100%;
+        //background-color: #666;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    &__item{
+        width: 25%;
+        //height: 130px;
+        //background-color: #54c2f9;
+        //color: white;
+        font-size: $font-size_s;
+        padding: 1.5rem;
+        box-sizing: border-box;
+        border-bottom: 1px solid #72b1fb;//#85e1ff;
+        @include mq(){
+            width: 50%;
+        }
+        &--order1{
+            @include mq(){
+                order: 1;
+            }
+        }
+        &--order2{
+            @include mq(){
+                order: 2;
+            }
+        }
+        &--order3{
+            @include mq(){
+                order: 3;
+            }
+        }
+        &--order4{
+            @include mq(){
+                order: 4;
+            }
+        }
+        &--order5{
+            @include mq(){
+                order: 5;
+            }
+        }
+        &--order6{
+            @include mq(){
+                order: 6;
+            }
+        }
+        &--order7{
+            @include mq(){
+                order: 7;
+            }
+        }
+        &--order8{
+            @include mq(){
+                order: 8;
+            }
+        }
+    }
+    &__title{
+        height: 2rem;
+        margin-left: 0.3rem;
+    }
+    
+    &__icon{
+        height: 2rem;
+        font-size: 1.8rem;
+    }
+    &__num{
+        height: 8.5rem;
+        line-height: 8.5rem;
+        width: 100%;
+        text-align: center;
+        font-size: 4rem;
+    }
+    
+}

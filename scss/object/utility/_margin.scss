@@ -1,0 +1,32 @@
+
+.u-margin{
+    &--l{
+        &--5{
+            margin-left: 0.5rem;
+        }
+        &--10{
+            margin-left: 1.0rem;
+        }
+        &--15{
+            margin-left: 1.5rem;
+        }
+        &--20{
+            margin-left: 2.0rem;
+        }
+        &--30{
+            margin-left: 3.0rem;
+        }
+        &--40{
+            margin-left: 4.0rem;
+        }
+    }
+    &--t--20{
+        margin-top: 20px;
+    }
+    &--t--40{
+        margin-top: 40px;
+    }
+    &--t--60{
+        margin-top: 60px;
+    }
+}

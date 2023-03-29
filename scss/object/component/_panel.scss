@@ -1,0 +1,24 @@
+
+.c-panel{
+    width: 100%;
+    //padding-right: 3rem;
+    &__header{
+        height: 4rem;
+        font-size: $font-size_m;
+        color: $font-color_dark;
+        border: 1px solid #ddd;
+        border-top: none;
+        border-bottom: none;
+        display: flex;
+        align-items: flex-end;
+        @include mq(){
+            border-top: 1px solid #ddd;
+        }
+        &__title{
+            display: flex;
+            align-items: center;
+            margin-left: 1.0rem;
+            margin-bottom: 0.3rem;
+        }
+    }
+}

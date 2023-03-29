@@ -1,0 +1,12 @@
+.p-dashboard{
+    @include mq(){
+        margin-top: 60px;
+    }
+    &__title{
+        height: 4rem;
+        font-size: $font-size_xl;
+        @include mq(){
+            padding-top: .5rem;
+        }
+    }
+}

@@ -1,0 +1,120 @@
+
+.p-header{
+    height: 100%;
+    border-right: 1px solid #ddd;
+    float: right;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    @include mq(){
+        height: 60px;
+        width: 100%;
+        position: fixed;
+        z-index: 1;      
+    }
+    &__inner{
+
+
+        display: flex;
+        flex-direction: column;
+        @include mq(){
+            height: auto;
+            width: 100%;
+            position: relative;
+            background-color: #fff;
+            box-shadow: 0 1px 3px #cacaca;
+            height: 60px;
+            display: block;
+            overflow: hidden;
+        }
+    }
+
+    &__logo{
+        width: 100%;
+        padding-top: 5px;
+        padding-left: 5px;
+        padding-right: 15px;
+        box-sizing: border-box;
+        display: block;
+        @include mq(){
+            width: 200px;
+            float: left;
+            z-index: 4;
+            @include mq('ss'){
+                width: 150px;
+                margin-top: 7px;
+            }
+        }
+        img{
+            width: 100%;
+        }
+
+        
+    }
+    &__nav{
+        @include mq(){
+            position: relative;
+        }
+
+        &__inner{
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #fff;
+            @include mq(){
+                width: 300px;
+                height: 100vh;
+                transition: all .5s;
+                position: absolute;
+                top: 0;
+                right: -300px;
+                border-left: solid 1px $border-color_default;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                &.is-active{
+                    transform: translateX(-300px);
+                }
+                @include mq('ss'){
+                    width: 250px;
+                }
+            }
+
+            //background-color: #333;
+            //padding-top: 2px;
+            //padding-bottom: 2px;
+            //padding-left: 10px;
+        }
+
+        &__item{
+            width: 100%;
+            font-size: $font-size_m;
+            display: block;
+            box-sizing: border-box;
+            padding: 2.0rem 1.5rem 2.0rem 1.5rem;
+            //color: red;
+            //background-color: #fff;
+            display: flex;
+            align-items: center;
+            @include mq(){
+                font-size: $font-size_l;
+                height: 10rem;
+                width: 200px;
+            }
+            &.is-active{
+                background-color: lightblue;
+
+            }
+            &:hover{
+                cursor: pointer;
+                background-color: $background-color_hover;
+                transition: 0.3s;
+            }
+        }
+        
+    }
+    
+}
+
+.js-nav--active{
+    color: $mainBlue;
+}

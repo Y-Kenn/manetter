@@ -1,0 +1,60 @@
+.p-sign{
+    width: 450px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    @include mq(){
+        width: 80%;
+    }
+    &__title{
+        text-align: center;
+        font-size: $font-size_3l;
+        color: $font-color_dark;
+        margin-bottom: 30px;
+        @include mq(){
+            font-size: $font-size_xxl;
+        }
+    }
+    &__form{
+        font-size: $font-size_l;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        box-sizing: border-box;
+        background-color: $background-color_soft;
+        border-radius: 5px;
+        &__title{
+            font-size: $font-size_xl;
+            font-weight: 100;
+            color: $font-color_default;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+    
+    &__twitter{
+        position: relative;
+        margin: auto;
+        width: 250px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: $font-size_l;
+        background-color: #4a99e9;
+        color: #fff;
+        border-radius: 6px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        @include mq(){
+            width: 200px;
+        }
+        &__icon{
+            position: absolute;
+            left: 68px;
+            @include mq(){
+                left: 43px
+            }
+        }
+    }
+}
