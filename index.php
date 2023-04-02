@@ -150,7 +150,7 @@ require('head.php');
                             </div>
                             <div class="c-tile__item c-tile__item--order3">
                                 <i class="fa-solid fa-arrow-right"></i><i class="fa-solid fa-user-minus c-tile__icon"></i>
-                                <span class="c-tile__title">フォロー解除</span>
+                                <span class="c-tile__title">フォロワー解除</span>
                                 <div id="js-chart--unfollowed_hist"></div>
                             </div>
                             <div class="c-tile__item c-tile__item--order5">
