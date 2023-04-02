@@ -564,14 +564,7 @@ a {
       display: flex;
       align-items: center; } }
   .p-user__inner {
-    width: 100%;
-    /* @include mq(){
-            display: flex;
-            flex-direction: row;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        } */ }
+    width: 100%; }
     @media screen and (max-width: 1000px) {
       .p-user__inner {
         width: 220px; } }
@@ -591,27 +584,18 @@ a {
     display: block;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
-    /* @include mq(){
-            display: none;
-        } */ }
+    text-overflow: ellipsis; }
   .p-user__screen_name {
     font-size: 1.2rem;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
-    /* @include mq(){
-            display: none;
-        } */ }
+    text-overflow: ellipsis; }
   .p-user__border {
     border: 1px solid #fff;
     border-radius: 10px;
     box-sizing: border-box;
     margin-right: 10px;
-    background-color: #f3f3f3;
-    /* @include mq(){
-            background-color: #fff;
-        } */ }
+    background-color: #f3f3f3; }
   .p-user__num {
     display: flex;
     justify-content: space-between;
@@ -705,77 +689,6 @@ a {
     border-radius: 0 8px 8px 0;
     background-image: linear-gradient(90deg, #f29cfa, #f5affc) !important; }
 
-/*
-input[type="range"] { 
-    margin: auto;
-    -webkit-appearance: none;
-    position: relative;
-    overflow: hidden;
-    height: 40px;
-    width: 200px;
-    cursor: pointer;
-    border-radius: 0; // iOS
-}
-
-::-webkit-slider-runnable-track {
-    background: #ddd;
-}
-
-::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 20px; 
-    height: 40px;
-    background: #fff;
-    box-shadow: -200px 0 0 200px dodgerblue;
-    border: 2px solid #999;
-}
-
-::-moz-range-track {
-    height: 40px;
-    background: #ddd;
-}
-
-::-moz-range-thumb {
-    background: #fff;
-    height: 40px;
-    width: 20px;
-    border: 3px solid #999;
-    border-radius: 0 !important;
-    box-shadow: -200px 0 0 200px dodgerblue;
-    box-sizing: border-box;
-}
-
-::-ms-fill-lower { 
-    background: dodgerblue;
-}
-
-::-ms-thumb { 
-    background: #fff;
-    border: 2px solid #999;
-    height: 40px;
-    width: 20px;
-    box-sizing: border-box;
-}
-
-::-ms-ticks-after { 
-    display: none; 
-}
-
-::-ms-ticks-before { 
-    display: none; 
-}
-
-::-ms-track { 
-    background: #ddd;
-    color: transparent;
-    height: 40px;
-    border: none;
-}
-
-::-ms-tooltip { 
-    display: none;
-}
-*/
 .p-sign {
   width: 450px;
   margin: auto;

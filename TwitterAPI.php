@@ -48,13 +48,19 @@ class UseApi{
             '+' => '-',
             '/' => '_',
         ];
-        return strtr($encoded_random_string, $url_safe_encoding);
+        $CV = strtr($encoded_random_string, $url_safe_encoding);
+        debug('CODE VERIFIER : ' .print_r($CV, true));
+
+        return $CV;
     }
 
     public function generateCodeChallenge($code_verifier)
     {
         $hash = hash('sha256', $code_verifier, true);
-        return str_replace('=', '', strtr(base64_encode($hash), '+/', '-_'));
+        $CC = str_replace('=', '', strtr(base64_encode($hash), '+/', '-_'));
+        debug('CODE VERIFIER : ' .print_r($CC, true));
+
+        return $CC;
     }
 }
 
@@ -128,8 +134,9 @@ class TwitterApi extends UseApi{
 
         curl_close($curl);
 
+        debug('GET_ACCESS_TOKEN : ' .print_r($result, true));
         
-        return json_decode($response, true);
+        return $result;
     }
 
     //トークンのリフレッシュ//
@@ -151,6 +158,7 @@ class TwitterApi extends UseApi{
         
         $response = curl_exec($curl);
         $result = json_decode($response, true);
+        if(!isset($result['access_token'])) debug('ERR -refreshToken- : ' .print_r($result, true));
 
         curl_close($curl);
 
@@ -463,7 +471,10 @@ class TwitterApi extends UseApi{
         $result = $this->request($url, 'GET');
         
         //取得に失敗した場合
-        if(!$result['data']) return array('status' => 1101);
+        if(!$result['data']){
+            debug('ERR -getLikingTweet- : ' .print_r($result, true));
+            return array('status' => 1101);
+        }
 
         $next_token = $result['meta']['next_token'];
         $liking = array();
@@ -521,7 +532,10 @@ class TwitterApi extends UseApi{
         $result = $this->request($url, 'GET');
 
         //取得に失敗した場合
-        if(!$result['data']) return array('status' => 1101);
+        if(!$result['data']){
+            debug('ERR -getFollowers- : ' .print_r($result, true));
+            return array('status' => 1101);
+        }
 
         $next_token = $result['meta']['next_token'];
         $followers = array();
@@ -564,8 +578,9 @@ class TwitterApi extends UseApi{
 
         //取得に失敗した場合
         if(!$result['data']){
+            debug('ERR -getFollowing- : ' .print_r($result, true));
             return array('status' => 1101);
-        } 
+        }
         if(isset($result['meta']['next_token'])) $next_token = $result['meta']['next_token'];
 
         $following = array();

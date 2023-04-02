@@ -1,24 +1,14 @@
 .p-user{
     margin-top: 20px;
     margin-bottom: 20px;
-    //flex: 1;
     display: flex;
     align-items: flex-end;
    @include mq(){
        display: flex;
        align-items: center;
-       //margin-top: 20px;
    }
     &__inner{
-        //margin-bottom: 20px;
         width: 100%;
-        /* @include mq(){
-            display: flex;
-            flex-direction: row;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        } */
         @include mq(){
             width: 220px;
         }
@@ -38,24 +28,16 @@
     &__name{
         font-size: $font-size_s;
         color: $font-color_dark;
-        //float: left;
         display: block;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        /* @include mq(){
-            display: none;
-        } */
-
     }
     &__screen_name{
         font-size: $font-size_ss;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        /* @include mq(){
-            display: none;
-        } */
     }
     &__border{
         border: 1px solid #fff;
@@ -63,19 +45,12 @@
         box-sizing: border-box;
         margin-right: 10px;
         background-color: $background-color_hover;
-        /* @include mq(){
-            background-color: #fff;
-        } */
-        
     }
     &__num{
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 5px;
-        
-        
-        //border-bottom: 1px solid #ddd;
         
         &__title{
             font-size: $font-size_m;

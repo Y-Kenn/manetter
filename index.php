@@ -14,7 +14,7 @@ $Manetter = new Manetter($key, $secret, $bearer, $dsn, $user, $password, $client
 $token = $Manetter->TwitterDB->getRegisteredToken($twitter_id);
 debug('TOKEN:'.print_r($token, true));
 $Manetter->setTokenToHeader($token['access_token']);
-
+debug('HEADER :'.print_r($Manetter->header, true));
 $my_info = $Manetter->getMyInfo();
 //メンション取得
 $mentions = $Manetter->getMentions($twitter_id);
@@ -30,7 +30,7 @@ if(1){
         $tweets_sorted_reply = $Manetter->sortTweetsByMetrics($tweets_30days, 'reply_count');
     }else{
         debug('Could not get Tweets data');
-        debug('Twitter ID : ' .print_r($tweet_id, true));
+        debug('Twitter ID : ' .print_r($twitter_id, true));
         debug('Token : ' .print_r($token, true));
     }
     

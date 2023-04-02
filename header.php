@@ -2,7 +2,7 @@
 <dev class="l-container__header">
     <div class="p-header">
         <div class="p-header__inner">
-            <a href="index.php" class="p-header__logo"><img src="img/logo.png"></a>
+            <a href="index.php" class="p-header__logo"><img src="https://s3.ap-northeast-1.amazonaws.com/manetter.com/logo.png"></a>
             <div class="p-nav_trigger js-toggle_nav_trigger">
                 <span></span>
                 <span></span>

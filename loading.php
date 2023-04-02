@@ -7,7 +7,7 @@ debug('[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[');
 debug('- LOADING-');
 debug('[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[');
 
-$ses_limit = 60*60*24;//セッションリミット　デフォルト１時間
+$ses_limit = 60*60*24;//セッションリミット
 
 
 $Manetter = new Manetter($key, $secret, $bearer, $dsn, $user, $password, $client_id, $client_secret, $redirect_uri);

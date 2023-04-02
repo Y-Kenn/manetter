@@ -1,6 +1,5 @@
 .c-button{
     transition: all 0.2s 0s linear;
-    //z-index: 100;
     &:hover{
         transform: translate(0 , 0.3rem);
         cursor: pointer;
@@ -31,16 +30,14 @@
         border: none;      
         background-color: #fff;
         color: $font-color_default;
-        box-shadow: 0px 5px 12px #CAD4E2;
-        //box-shadow: 0 0.7rem 0.9rem #aae3ff;       
+        box-shadow: 0px 5px 12px #CAD4E2;   
         &:hover{
-            //box-shadow: 0 0.3rem 0.5rem #aae3ff
             box-shadow: 0 0 4px #CAD4E2;
         }
     }
     &--like{
         border: none;      
-        background-image: linear-gradient(160deg, #ec67f8,#f29cfa);//#f5affc, #ec67f8
+        background-image: linear-gradient(160deg, #ec67f8,#f29cfa);
         color: #fff;
         box-shadow: 0 0.7rem 0.9rem #fad3fd;
         &:hover{

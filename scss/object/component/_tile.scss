@@ -10,20 +10,16 @@
     }
     &__inner{
         width: 100%;
-        //background-color: #666;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
     }
     &__item{
         width: 25%;
-        //height: 130px;
-        //background-color: #54c2f9;
-        //color: white;
         font-size: $font-size_s;
         padding: 1.5rem;
         box-sizing: border-box;
-        border-bottom: 1px solid #72b1fb;//#85e1ff;
+        border-bottom: 1px solid #72b1fb;
         @include mq(){
             width: 50%;
         }

@@ -44,6 +44,8 @@ class Manetter extends TwitterAPI{
         debug('REFRESH TOKEN -> REFRESH : ' .print_r($refresh, true));
         $this->setTokenToHeader($refresh['access_token']);
         $my_info = $this->getMyInfo();
+        $my_info = $this->getMyInfo();
+        $my_info = $this->getMyInfo();
         debug('REFRESH TOKEN -> MY INFO : ' .print_r($my_info, true));
         $this->TwitterDB->updateToken($refresh['access_token'], $refresh['refresh_token'], $my_info['data']['id']);
         
